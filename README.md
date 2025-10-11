@@ -63,7 +63,36 @@ npm cache clean --force
 npm install
 ```
 
-3. **Configure Environment Variables**: Create a `.env` file and set up the necessary API keys and configurations.
+3. **Configure Environment Variables**: Create a `.env` file from the `.env.example` template:
+
+```bash
+cp .env.example .env
+```
+
+Then edit the `.env` file and replace `your_ror_token_here` with your actual DatoCMS API token:
+
+- Go to [DatoCMS](https://www.datocms.com/)
+- Navigate to **Settings > API tokens**
+- Create a new **Read-only API token**
+- Copy the token and paste it in your `.env` file:
+
+```
+REACT_APP_DATOCMS_ROR_TOKEN=your_actual_token_here
+```
+
+**Note**: When running on `localhost`, the app uses the `REACT_APP_DATOCMS_ROR_TOKEN` by default. 
+
+**Testing Other Portfolio Versions**: If you want to test the Java, Frontend, or Node portfolios locally:
+- Get API tokens for each DatoCMS project and add them to your `.env` file
+- Set up local hostname aliases (see `SETUP_LOCAL_DOMAINS.md` for instructions)
+- Access different versions via `java.localhost:3000`, `frontend.localhost:3000`, etc.
+
+3.1. **Set Up DatoCMS Content Models**: You need to create content models in your DatoCMS project:
+
+- See the detailed guide: **[DATOCMS_SETUP_GUIDE.md](./DATOCMS_SETUP_GUIDE.md)**
+- Or visit `http://localhost:3000/test-schema` after starting the app to check your current schema
+- Create the required models: Profile Banner, Projects, Skills, Certifications, Work Permit, Contact Me
+
 4. **Run the Project**: Start the development server.
 
 ```bash
