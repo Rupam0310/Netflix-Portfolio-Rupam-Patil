@@ -134,7 +134,7 @@ Your feedback is valuable and helps make this project better for everyone. Thank
 ## 📧 Contact Me
 
 - 💼 [Portfolio Website](https://rupampatil.com)
-- 📧 Email: [chintusamala96@gmail.com](mailto:patilrupam2003@gmail.com)
+- 📧 Email: [patilrupam2003@gmail.com](mailto:patilrupam2003@gmail.com)
 - 🔗 [LinkedIn](https://www.linkedin.com/in/rupam-patil-470848223/)
 
 ---
