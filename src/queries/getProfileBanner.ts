@@ -9,14 +9,17 @@ const GET_PROFILE_BANNER = `
       url
     }
     headline
-    resumeLink {
-      url
-    }
+
+    resumeLink
     linkedinLink
     profileSummary
   }
 }
 `;
+
+    // resumeLink {
+    //   url
+    // }
 
 export async function getProfileBanner(): Promise<ProfileBanner> {
   const data = await datoCMSClient.request<{ profilebanner: ProfileBanner }>(GET_PROFILE_BANNER);

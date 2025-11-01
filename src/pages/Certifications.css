@@ -27,7 +27,7 @@
 .certifications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 1.2rem;
   width: 100%;
   max-width: 1000px;
   justify-items: center;
@@ -68,11 +68,26 @@
   margin-bottom: 0.5rem;
 }
 
+.certification-icon-img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+}
+
 .certification-link {
   font-size: 1.5rem;
   color: #e50914; /* Netflix red */
   transition: transform 0.2s ease;
 }
+
+.certification-link svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 
 .certification-card:hover .certification-link {
   transform: scale(1.2);

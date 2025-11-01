@@ -41,6 +41,13 @@
   margin-bottom: 10px;
 }
 
+.icon img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  display: inline-block;
+}
+
 .skill-name {
   display: flex;
   justify-content: center;

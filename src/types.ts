@@ -3,9 +3,10 @@
 export interface ProfileBanner {
   backgroundImage: { url: string };
   headline: string;
-  resumeLink: {
-    url: string;
-  };
+  // resumeLink: {
+  //   url: string;
+  // };
+  resumeLink: string;
   linkedinLink: string;
   profileSummary: string;
 }
@@ -22,7 +23,7 @@ export interface TimelineItem {
   name: string;
   title: string;
   techStack: string;
-  summaryPoints: string[];
+  summaryPoints: string; // DatoCMS text field returns a single string
   dateRange: string;
 }
 
@@ -38,7 +39,7 @@ export interface Certification {
   issuer: string;
   issuedDate: string;
   link: string;
-  iconName: string;
+  iconName: { url: string };
 }
 
 export interface ContactMe {
@@ -56,5 +57,5 @@ export interface Skill {
   name: string;
   category: string;
   description: string;
-  icon: string;
+  icon: { url: string };
 }

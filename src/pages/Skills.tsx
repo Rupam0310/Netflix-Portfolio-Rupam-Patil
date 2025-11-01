@@ -33,8 +33,13 @@ const Skills: React.FC = () => {
 
   useEffect(() => {
     async function fetchSkills() {
-      const data = await getSkills();
-      setSkillsData(data);
+      try {
+        const data = await getSkills();
+        console.log("Fetched skills data:", data);
+        setSkillsData(data);
+      } catch (error) {
+        console.error("Error fetching skills:", error);
+      }
     }
 
     fetchSkills()
@@ -57,7 +62,13 @@ const Skills: React.FC = () => {
           <div className="skills-grid">
             {skillsByCategory[category].map((skill: any, idx: number) => (
               <div key={idx} className="skill-card">
-                <div className="icon">{iconMap[skill.icon] || <FaReact />}</div>
+                <div className="icon">
+                  {skill?.icon?.url ? (
+                    <img src={skill.icon.url} alt={skill.name} />
+                  ) : (
+                    iconMap[skill.icon] || <FaReact />
+                  )}
+                </div>
                 <h3 className="skill-name">
                   {skill.name.split('').map((letter: any, i: number) => (
                     <span key={i} className="letter" style={{ animationDelay: `${i * 0.05}s` }}>
